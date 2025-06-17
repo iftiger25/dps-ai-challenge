@@ -60,7 +60,7 @@ json
 Endpoint: /predict
 Method: POST
 Input: {"year": 2021, "month": 1}
-
+---
 ## 📂 Project Structure
 
 ```text
@@ -78,16 +78,17 @@ Input: {"year": 2021, "month": 1}
 └── requirements.txt.txt
 └── README.md
 ```
-
+---
 ## 🌐 Deployment
 Tech Stack:
 • Framework: FastAPI
 • Model: Prophet (Facebook’s time-series library)
 • Hosting: Render.com
-
+---
 ## 🤝 Contributing
 1. Fork the repository.
 1. Open an issue or submit a PR with improvements.
-
+---
 ## 📜 License
 MIT
+---
