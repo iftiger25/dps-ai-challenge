@@ -31,7 +31,7 @@ This project completes the **DPS AI Challenge** by:
    cd ai-mvp-coach-challenge-munich-accidents
 
 2. **Install dependencies:**
-```bash
+bash
 pip install -r requirements.txt
 
 ##🏃 Usage
