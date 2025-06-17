@@ -31,21 +31,20 @@ This project completes the **DPS AI Challenge** by:
    cd ai-mvp-coach-challenge-munich-accidents
 
 2. **Install dependencies:**
-bash
+```bash
 pip install -r requirements.txt
 
 ##🏃 Usage
 1. **Training the Model**
-bash
+```bash
 python train.py --data_path ./data/verkehrsunfaelle.csv
 (Outputs model weights and evaluation metrics.)
 
 2. **Running the API Locally**
-bash
+```bash
 uvicorn src.api:app --reload
 Test the API:
-
-bash
+```bash
 curl -X POST http://localhost:8000/predict \
   -H "Content-Type: application/json" \
   -d '{"year": 2021, "month": 1}'
@@ -58,12 +57,10 @@ json
 🔗 Deployed API: https://dps-ai-challenge-n0s4.onrender.com/docs
 
 Endpoint: /predict
-
 Method: POST
-
 Input: {"year": 2021, "month": 1}
 
-##📂 Project Structure
+# 📂 Project Structure
 
 ├── data/
 │   └── verkehrsunfaelle.csv          # Raw dataset (filtered to pre-2021)
@@ -79,15 +76,15 @@ Input: {"year": 2021, "month": 1}
 ├── requirements.txt
 └── README.md
 
-##🌐 Deployment
+# 🌐 Deployment
 Tech Stack:
 • Framework: FastAPI
 • Model: Prophet (Facebook’s time-series library)
 • Hosting: Render.com
 
-##🤝 Contributing
+# 🤝 Contributing
 1. Fork the repository.
 1. Open an issue or submit a PR with improvements.
 
-##📜 License
+# 📜 License
 MIT
