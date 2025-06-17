@@ -3,17 +3,17 @@ AI entrepreneurship is a journey, one filled with rapid innovation, powerful dec
 
 This open-source project builds the AI Coaching Atlas, a dynamic map of the entrepreneurial journey where AI Coaches serve as professional buddies, guiding founders through critical stages with tailored support.
 
-🌍 What is the AI Coaching Atlas?
+# 🌍 What is the AI Coaching Atlas?
 The AI Coaching Atlas represents the key milestones and challenges AI entrepreneurs face, with specialized AI Coaches assisting at every step. Whether you're building up your entrepreneurship mindset or refining your human-centered discovery & development strategy, our multi-agent coaching system helps you move forward with confidence.
 
-📍 Key Focus Areas:
+# 📍 Key Focus Areas:
 ✅ Customer Painpoint Decision-Making – Guiding your self-reflection on deep customer insights and prioritization.
 ✅ AI Ethics & Responsible AI – Coaching you step-by-step to vuild AI that aligns with ethical principles.
 ✅ UX & Product Validation Coaching – Coaching your steps to ensure your AI product meets user needs.
 ✅ Agile & Lean Startup Coaching – Coaching you to adapt and iterate quickly.
 ✅ Develop a Mindset for Success – Strengthening your resilience, intuition, and confidence as you scale.
 
-🤝 Open-Source & Community-Driven
+# 🤝 Open-Source & Community-Driven
 This project is a collaborative effort to build AI-driven coaching agents that empower entrepreneurs at every stage. We invite AI engineers, startup mentors, and founders to contribute by:
 🔹 Developing AI Coaches to support different challenges.
 🔹 Sharing expertise and insights to improve the coaching experience.
