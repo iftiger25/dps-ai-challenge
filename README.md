@@ -1,90 +1,44 @@
-# 🚀 Atlas of Agentic Coaches for AI Entrepreneurs
-AI entrepreneurship is a journey, one filled with rapid innovation, powerful decisions, and constant adaptation. As AI entrepreneurs, we navigate multiple landscapes, from problem-solution fit to rapid prototyping, user experience of AI features, and ethical AI considerations.
+# 🚨 AI-Powered Munich Traffic Accident Predictor 🚦  
+*A machine learning model to forecast alcohol-related accidents in Munich (2021) using historical data (pre-2021).*  
 
-This open-source project builds the AI Coaching Atlas, a dynamic map of the entrepreneurial journey where AI Coaches serve as professional buddies, guiding founders through critical stages with tailored support.
+![Demo GIF/Screenshot](#) *(Add a screenshot of your visualization/prediction here)*  
 
-# 🌍 What is the AI Coaching Atlas?
-The AI Coaching Atlas represents the key milestones and challenges AI entrepreneurs face, with specialized AI Coaches assisting at every step. Whether you're building up your entrepreneurship mindset or refining your human-centered discovery & development strategy, our multi-agent coaching system helps you move forward with confidence.
+## 📌 Overview  
+This project completes the **DPS AI Challenge** by:  
+✅ **Cleaning and preprocessing** Munich’s traffic accident dataset (filtered to pre-2021 data).  
+✅ **Training a time-series model** to predict accidents for *January 2021* (`Alkoholunfälle, insgesamt`).  
+✅ **Deploying an API endpoint** that returns predictions via POST requests.  
+✅ **Computing error metrics** against actual 2021 data (optional validation).  
 
-# 📍 Key Focus Areas:
-✅ Customer Painpoint Decision-Making – Guiding your self-reflection on deep customer insights and prioritization.
-✅ AI Ethics & Responsible AI – Coaching you step-by-step to vuild AI that aligns with ethical principles.
-✅ UX & Product Validation Coaching – Coaching your steps to ensure your AI product meets user needs.
-✅ Agile & Lean Startup Coaching – Coaching you to adapt and iterate quickly.
-✅ Develop a Mindset for Success – Strengthening your resilience, intuition, and confidence as you scale.
+---
 
-# 🤝 Open-Source & Community-Driven
-This project is a collaborative effort to build AI-driven coaching agents that empower entrepreneurs at every stage. We invite AI engineers, startup mentors, and founders to contribute by:
-🔹 Developing AI Coaches to support different challenges.
-🔹 Sharing expertise and insights to improve the coaching experience.
-🔹 Expanding the AI Coaching Atlas by mapping out more founder journey milestones.
+## 🚀 Features  
+- **Data Pipeline**:  
+  - Filters records post-2020 for consistency.  
+  - Handles missing values and outliers.  
+- **Forecasting Model**:  
+  - Predicts alcohol-related accidents (`Alkoholunfälle, insgesamt`) for 2021.  
+  - Supports custom year/month inputs via API.  
+- **API Deployment**:  
+  - Accepts JSON payloads (e.g., `{"year": 2021, "month": 1}`).  
+  - Returns predictions (e.g., `{"prediction": 42}`).  
 
-Technical Implementation
-Our open-source project uses CrewAI for the implementation and orchestration of collaborative multi-agentic AI systems.
-It is pioneered by the AI Makerspace community of DPS to make AI entrepreneurship coaching scalable and accessible to all teams. DPS community of AI engineers are all invited to contribute by submitting Agents Tasks, and Crews.
+---
 
-Features
-Modular Architecture: Built using CrewAI, allowing easy addition of new agents and tasks.
-Community-driven: Encourage community members to contribute their own AI agents.
-Flexible Configuration: Easily customize agents and tasks through YAML configuration files.
-Extensible Tools: Support for custom tools to enhance agent capabilities.
-Getting Started
-To get started with Agentic AI Coach, follow these steps:
+## ⚙️ Installation  
+1. **Clone the repository**:  
+   ```bash
+   git clone https://github.com/iftiger25/ai-mvp-coach-challenge-munich-accidents.git
+   cd ai-mvp-coach-challenge-munich-accidents
 
-Clone the repository:
+2. **Install dependencies**:
+   pip install -r requirements.txt
+   
+3. **Set up environment variables**
+echo "OPENAI_API_KEY=your_key" > .env  # If using LLMs
 
-git clone DigitalProductschool/AgenticAICoach
-cd AgenticAICoach
-Select one of the available applications. For example, responsible_ai.
-
-Run the project following the README guidelines.
-
-Project Structure
-Our project follows CrewAI's recommended structure:
-
-AgenticAICoach/
-├── knowledgebase_learning/
-├── responsible_ai/
-│   ├── db/
-│   ├── src/
-│   │   └── ai_act_compliance_checker/
-│   │       ├── config/
-│   │       │   ├── agents.yaml
-│   │       │   ├── tasks.yaml
-│   │       ├── data/
-│   │       ├── tools/
-│   │       ├── __init__.py
-│   │       ├── crew.py
-│   │       ├── main.py
-│   ├── .env.example
-│   ├── .gitignore
-│   ├── poetry.lock
-│   ├── pyproject.toml
-│   ├── README.md
-│   ├── trained_agents_data.pkl
-├── community_submissions/
-│   ├── agent_template/
-│   │   ├── tests/
-│   │   │   └── test_agent.py
-│   │   ├── agent.py
-│   ├── coaching_application_template/
-├── docs/
-│   ├── CONTRIBUTING.md
-│   ├── PULL_REQUEST_TEMPLATE.md
-├── .env.example
-├── .gitignore
-├── LICENSE
-└── README.md
-Contributing
-We welcome contributions! Please see our Contributing Guidelines for more information on how to contribute to this project.
-
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-Acknowledgments
-Special thanks to the CrewAI team for creating such an excellent framework!
-Thanks to all community members who contribute their agents to this project.
-📬 Stay Connected
-💡 Have ideas? Open an issue or start a discussion!
-
-🚀 Let's build the future of AI coaching together!
+## 🏃 Usage
+python train.py --data_path ./data/verkehrsunfaelle.csv
+1. Training the Model
+   python train.py --data_path ./data/verkehrsunfaelle.csv
+2. Running the API Locally
