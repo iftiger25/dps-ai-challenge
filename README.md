@@ -63,19 +63,21 @@ Input: {"year": 2021, "month": 1}
 
 ## 📂 Project Structure
 
+```text
+├── .gitignore
+├── README.md
 ├── data/
-│   └── verkehrsunfaelle.csv          # Raw dataset (filtered to pre-2021)
-├── notebooks/
-│   ├── EDA.ipynb                     # Exploratory analysis
-│   └── Model_Training.ipynb          # Prophet model experiments
-├── src/
-│   ├── train.py                      # Training script
-│   └── api.py                        # FastAPI endpoint
+│   └── monatszahlen_verkehrsunfaelle.csv
+├── models/
+│   └── prophet_model.joblib
 ├── outputs/
-│   ├── model.pkl                     # Saved Prophet model
-│   └── historical_accidents_forecast.png  # Prediction visualization
-├── requirements.txt
+│   └── historical_accidents_forecast.png
+├── src/
+│   ├── app.py
+│   └── main.py
+└── requirements.txt.txt
 └── README.md
+```
 
 ## 🌐 Deployment
 Tech Stack:
