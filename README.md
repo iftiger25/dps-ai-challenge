@@ -57,9 +57,39 @@ json
 3. **Live API Documentation**
 🔗 Deployed API: https://dps-ai-challenge-n0s4.onrender.com/docs
 
-Endpoint: /predict
-Method: POST
-Input: {"year": 2021, "month": 1}
+1. API Endpoint
+plaintext
+POST https://dps-ai-challenge-n0s4.onrender.com/predict
+
+#Input:
+
+json
+{
+  "year": 2021,
+  "month": 1
+}
+
+#Output:
+
+json
+{
+  "prediction": 396.9
+}
+2. Live Test Results
+Curl Command:
+
+bash
+curl -X 'POST' \
+  'https://dps-ai-challenge-n0s4.onrender.com/predict' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{"year": 2021, "month": 1}'
+Response:
+
+Status Code: 200 (Success)
+
+Prediction: 396.9 accidents forecasted for Jan 2021.
+
 ---
 ## 📂 Project Structure
 
